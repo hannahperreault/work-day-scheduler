@@ -1,7 +1,7 @@
 # 04 Third-Party APIs: Work Day Scheduler
 
 <h1>Description</h1>
-This application is a timed code quiz with multiple-choice questions, using JavaScript and Jquery fundamentals.
+This application is work day schedule with saveable input fields.
 
 <h1>Usage</h2>
 <h3>When the user loads the page:</h3>
