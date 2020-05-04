@@ -13,7 +13,7 @@ This application is a timed code quiz with multiple-choice questions, using Java
 </ol>
 
 <h3>Credits</h3>
-<ol>
+<ul>
 <li>Bootstrap </li>
 <li>Moment.js</li>
-</ol>
+</ul>
