@@ -6,19 +6,9 @@ $("#current-day").append("Today is: " + currentDate);
 //variable for currentTime
 var currentTime = moment().format("HH");
 console.log(currentTime);
+var value;
 
-$(window).on("unload", function () {
-  loadSettings();
-});
-
-function loadSettings() {
-  var displayValue = localStorage.getItem("#10", value);
-  console.log(displayValue);
-  $("#10").push(displayValue);
-  //   if (value !== null) $("#inputName").val(value);
-}
-
-//function to color code based on whether time block should be labeled as past, present, or future, in relation to current time
+//=========function to color code based on whether time block should be labeled as past, present, or future, in relation to current time
 $(".text-field").each(function () {
   var hourValue = $(this).attr("id");
   if (hourValue < currentTime) {
@@ -28,74 +18,63 @@ $(".text-field").each(function () {
   }
 });
 
-//saving text input to local storage. I know this could be dry, but can't figure out how..
-$(document).ready(function () {
-  $("#button-save-9").click(function () {
-    var value = $("#09").val();
-    console.log(value);
-    localStorage.setItem("#09", value);
-  });
+//========
+
+//========saving text input to local storage=========
+$("#button-save-9").click(function () {
+  var value = $("#09").val();
+  localStorage.setItem("#09", value);
+  var savedInput = localStorage.getItem("#09");
+  textBox9 = savedInput;
 });
 
-$(document).ready(function () {
-  $("#button-save-10").click(function () {
-    var value = $("#10").val();
-    console.log(value);
-    localStorage.setItem("#10", value);
-  });
+$("#button-save-10").click(function () {
+  var value = $("#10").val();
+  console.log(value);
+  localStorage.setItem("#10", value);
 });
-$(document).ready(function () {
-  $("#button-save-11").click(function () {
-    var value = $("#11").val();
-    console.log(value);
-    localStorage.setItem("#11", value);
-  });
+$("#button-save-11").click(function () {
+  var value = $("#11").val();
+  console.log(value);
+  localStorage.setItem("#11", value);
 });
-$(document).ready(function () {
-  $("#button-save-12").click(function () {
-    var value = $("#12").val();
-    console.log(value);
-    localStorage.setItem("#12", value);
-  });
+$("#button-save-12").click(function () {
+  var value = $("#12").val();
+  console.log(value);
+  localStorage.setItem("#12", value);
 });
-$(document).ready(function () {
-  $("#button-save-13").click(function () {
-    var value = $("#13").val();
-    console.log(value);
-    localStorage.setItem("#13", value);
-  });
+$("#button-save-13").click(function () {
+  var value = $("#13").val();
+  console.log(value);
+  localStorage.setItem("#13", value);
 });
-$(document).ready(function () {
-  $("#button-save-14").click(function () {
-    var value = $("#14").val();
-    console.log(value);
-    localStorage.setItem("#14", value);
-  });
+$("#button-save-14").click(function () {
+  var value = $("#14").val();
+  console.log(value);
+  localStorage.setItem("#14", value);
 });
-$(document).ready(function () {
-  $("#button-save-15").click(function () {
-    var value = $("#15").val();
-    console.log(value);
-    localStorage.setItem("#15", value);
-  });
+$("#button-save-15").click(function () {
+  var value = $("#15").val();
+  console.log(value);
+  localStorage.setItem("#15", value);
 });
-$(document).ready(function () {
-  $("#button-save-16").click(function () {
-    var value = $("#16").val();
-    console.log(value);
-    localStorage.setItem("#16", value);
-  });
+$("#button-save-16").click(function () {
+  var value = $("#16").val();
+  console.log(value);
+  localStorage.setItem("#16", value);
 });
-$(document).ready(function () {
-  $("#button-save-17").click(function () {
-    var value = $("#17").val();
-    console.log(value);
-    localStorage.setItem("#17", value);
-  });
+$("#button-save-17").click(function () {
+  var value = $("#17").val();
+  console.log(value);
+  localStorage.setItem("#17", value);
 });
+//===============
 
-//when save button clicked:
-//event listener needed
-//add text field to local storage
-//clear auto formatting
-//keep in text field upon restoring page
+//====== I can't figure this out....Trying to make this happen: when window loads, push local storage value into text box=====
+function update() {
+  var info = localStorage.getItem(value);
+  console.log(info);
+  $("#10").text(info);
+  //   return;
+}
+window.onload = update();
